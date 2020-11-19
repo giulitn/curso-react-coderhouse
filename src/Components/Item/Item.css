@@ -1,0 +1,28 @@
+.card-title {
+  background-color: black;
+}
+
+.flex {
+    display: flex; /* Make products flex in row direction (default) */
+    flex-wrap: wrap; /* Make products overflow on new row */
+    justify-content: center; /* Or space-between or space-around */
+  }
+  
+  .flex > section {
+    flex: 1 1 0; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    max-width: 400px; 
+  }
+  
+  .flex > section > p {
+    flex-grow: 1; 
+  }
+  
+  ul {
+    display: flex; 
+    justify-content: space-between; 
+  }
+ 
