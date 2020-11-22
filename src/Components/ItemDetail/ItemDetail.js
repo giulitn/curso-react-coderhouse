@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemCountContainer from '../../Containers/ItemCountContainer'
+import AddToCart from '../AddToCart/AddToCart';
 
 function ItemDetail(props) {
     return (
@@ -20,8 +21,8 @@ function ItemDetail(props) {
                         - Utiles tanto para actividades indoor como outdoor.
                     </h5>
                     <div className='container'>
-                        <ItemCountContainer min='0' max='10' />
-                        <button className="waves-effect btn-large">Comprar</button>
+                        <ItemCountContainer min='0' max='10' handleClick={props.addtocart} />
+                        <AddToCart qtyCounter={props.itemqty}/>
                     </div>
 
                 </div>

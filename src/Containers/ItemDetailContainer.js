@@ -7,7 +7,15 @@ export default function ItemDetailContainer() {
 
     const [loading, setLoading] = useState(true);
     const [product, setProduct] = useState([]);
+    const [itemQty, setItemQty] = useState(0);
+    const handleAddToCartClick = (qtyCounter) => {
+        setItemQty(qtyCounter);
+        // console.log(qtyCounter + "Holaaaa!!!");
+    };
 
+    // useEffect(() => {
+    //     console.log(itemQty);
+    // }, [itemQty])
 
     const { id } = useParams();
 
@@ -21,7 +29,6 @@ export default function ItemDetailContainer() {
                     return data;
                 })
                 .then((data) => {
-                    console.log(data, 'holaaa!!!');
                     setProduct(data);
                 })
                 .catch((error) => {
@@ -37,14 +44,14 @@ export default function ItemDetailContainer() {
     if (!loading) {
         return (
             <div>
-                <ItemDetail product={product} />
+                <ItemDetail product={product} addtocart={handleAddToCartClick} itemqty={itemQty} />
             </div>
         )
     }
     if (loading) {
         return (
             <div className="progress">
-                <div class="indeterminate"></div>
+                <div className="indeterminate"></div>
             </div>
         );
     }

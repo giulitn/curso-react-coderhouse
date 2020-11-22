@@ -17,12 +17,10 @@ const ItemListContainer = () => {
         const getProducts = fetch('https://api.mercadolibre.com/sites/MLA/search?q=remera&limit=12') // esto es ASYNC, por eso después va un "then"
         getProducts
             .then((res) => {
-                console.log("primer then"+ res);
                 const data = res.json();
                 return data;
             })
             .then((data) => {
-                console.log("segundo then:", data.results);
                 setProducts(data.results);
             }
             )
