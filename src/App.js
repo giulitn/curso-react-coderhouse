@@ -6,17 +6,10 @@ import { NavBar } from './Components/Navbar/Navbar';
 // Containers
 import HomeContainer from './Containers/HomeContainer';
 import ItemDetailContainer from './Containers/ItemDetailContainer';
+import CartContainer from './Containers/CartContainer';
 
-
-// Styles 
-import M from 'materialize-css';
 
 function App() {
-
-  useEffect(() => {
-    M.AutoInit();
-  }, []);
-
   return (
     <BrowserRouter>
       <div>
@@ -26,6 +19,7 @@ function App() {
         <Switch>
           <Route exact path='/' render={() => <HomeContainer />} />
           <Route path='/item/:id' render={() => <ItemDetailContainer />} />
+          <Route path='/cart' render={() => <CartContainer />} />
         </Switch>
       </div>
     </BrowserRouter>

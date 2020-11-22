@@ -10,8 +10,7 @@ export const NavBar = ({ click, children }) => {
                 <div className="container">
 
                     <div className="row">
-                        {/* eslint-disable-next-line */}
-                        <a href="#" className="brand-logo">
+                        <a href="/" className="brand-logo"> 
                             <i className="material-icons align-left">favorite_border</i>
                         </a>
                         <div>
