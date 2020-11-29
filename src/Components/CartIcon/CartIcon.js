@@ -1,24 +1,18 @@
-import * as React from 'react';
+// import *  as React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../Context/cartContext'
+
+
 
 export const CartIcon = () => {
+
+    const [cartProducts] = useContext(CartContext);
+    
     return (
-        <a href='/cart'>
-            <i className="material-icons right hide-on-med-and-down">shopping_cart</i>
-        </a>
+            <Link to={'/cart'}>
+                <span className ="badge white"> {cartProducts.length} </span>
+                <i className="material-icons right hide-on-med-and-down">shopping_cart</i>
+            </Link>
     );
 };
-
-
-
-// function click() {
-//     function handleClick(e) {
-//       e.preventDefault();
-//       console.log('The link was clicked.');
-//     }
-
-//     return (
-//       <a href="#" onClick={handleClick}>
-//         Click me
-//       </a>
-//     );
-//   }

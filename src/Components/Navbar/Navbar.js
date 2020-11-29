@@ -2,17 +2,18 @@
 import * as React from 'react';
 import '../CartIcon/CartIcon';
 import { CartIcon } from '../CartIcon/CartIcon';
+import { Link } from 'react-router-dom';
 
-export const NavBar = ({ click, children }) => {
+export const NavBar = () => {
     return (
         <div>
             <nav>
                 <div className="container">
 
                     <div className="row">
-                        <a href="/" className="brand-logo"> 
+                        <Link to={"/"} className="brand-logo"> 
                             <i className="material-icons align-left">favorite_border</i>
-                        </a>
+                        </Link>
                         <div>
                             <CartIcon />
                         </div>

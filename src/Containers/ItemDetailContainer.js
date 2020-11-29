@@ -10,12 +10,8 @@ export default function ItemDetailContainer() {
     const [itemQty, setItemQty] = useState(0);
     const handleAddToCartClick = (qtyCounter) => {
         setItemQty(qtyCounter);
-        // console.log(qtyCounter + "Holaaaa!!!");
     };
 
-    // useEffect(() => {
-    //     console.log(itemQty);
-    // }, [itemQty])
 
     const { id } = useParams();
 

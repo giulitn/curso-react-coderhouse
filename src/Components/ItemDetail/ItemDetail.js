@@ -22,7 +22,7 @@ function ItemDetail(props) {
                     </h5>
                     <div className='container'>
                         <ItemCountContainer min='0' max='10' handleClick={props.addtocart} />
-                        <AddToCart qtyCounter={props.itemqty}/>
+                        <AddToCart qtyCounter={props.itemqty} productTitle={props.product.title}/>
                     </div>
 
                 </div>
