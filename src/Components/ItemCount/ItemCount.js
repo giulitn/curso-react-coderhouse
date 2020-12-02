@@ -1,19 +1,25 @@
 import * as React from 'react';
-import './itemCount.css'
+import { IoIosRemoveCircleOutline, IoIosAddCircleOutline } from 'react-icons/io';
+import { Button, ButtonGroup } from 'react-bootstrap';
+import './ItemCount.css'
+
 
 export default function itemCount({ counter, onAdd, onClick }) {
     return (
-        <div className='count container s12 m4 l8'>
-            <button className="btn-floating grey" onClick={() => onAdd('remove')}>
-                <i className="material-icons">remove</i>
-            </button>
-            <div className='number'>
-                {counter}
-            </div>
-            <button className="btn-floating grey" onClick={() => onAdd('add')}>
-                <i className="material-icons">add</i>
-            </button>
-        </div>
+        
+                <ButtonGroup>
+                    <Button onClick={() => onAdd('remove')}>
+                        <IoIosRemoveCircleOutline />
+                    </Button>
+                    <span className='number'>
+                        {counter}
+                    </span>
+                    <Button onClick={() => onAdd('add')}>
+                        <IoIosAddCircleOutline />
+                    </Button>
+                </ButtonGroup>
+         
+
     )
 }
 

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../../Context/cartContext'
+import { Button } from 'react-bootstrap';
 
 function AddToCart({ qtyCounter, productTitle }) {
     const [cartProducts, setCartProducts] = useContext(CartContext);
@@ -9,7 +10,7 @@ function AddToCart({ qtyCounter, productTitle }) {
 
     return (
         <div>
-            <button onClick={handleClick} className="waves-effect btn-large">Comprar</button>
+            <Button variant="dark" onClick={handleClick}>Comprar</Button>
         </div>
     );
 }

@@ -19,11 +19,13 @@ const ItemListContainer = () => {
     );
 
     return (
-        <div>
-            {products.map((product) => (
-                <Item key={product.id} title={product.title} id={product.id} price={product.price} img={product.picture} />
-            )
-            )}
+        <div className="container">
+            <div className="row">
+                {products.map((product) => (
+                    <Item key={product.id} title={product.title} id={product.id} price={product.price} img={product.picture} />
+                )
+                )}
+            </div>
         </div>
     );
 }

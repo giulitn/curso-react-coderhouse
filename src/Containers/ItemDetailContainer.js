@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from '../Components/ItemDetail/ItemDetail'
+import { Spinner } from 'react-bootstrap'
 
 
 export default function ItemDetailContainer() {
@@ -39,16 +40,16 @@ export default function ItemDetailContainer() {
 
     if (!loading) {
         return (
-            <div>
+            <div className="container">
                 <ItemDetail product={product} addtocart={handleAddToCartClick} itemqty={itemQty} />
             </div>
         )
     }
     if (loading) {
         return (
-            <div className="progress">
-                <div className="indeterminate"></div>
-            </div>
+            <Spinner animation="border" role="status">
+                <span className="sr-only">Conexión un poco lenta...</span>
+            </Spinner>
         );
     }
 }

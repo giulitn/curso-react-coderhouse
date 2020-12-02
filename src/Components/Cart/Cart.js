@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../../Context/cartContext'
+import { Button } from 'react-bootstrap'
 
 function Cart() {
     const [cartProducts] = useContext(CartContext);
@@ -11,9 +12,10 @@ function Cart() {
             </h2>
             <ul>
                 {cartProducts.map((product) => (
-                    <li>{product} </li>
+                    <li>{product}</li>
                 ))}
             </ul>
+            <Button> Hola mundo! </Button>
         </div>
     );
 }
