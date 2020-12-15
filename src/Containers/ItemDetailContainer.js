@@ -12,30 +12,23 @@ export default function ItemDetailContainer() {
     const handleAddToCartClick = (qtyCounter) => {
         setItemQty(qtyCounter);
     };
-
-
     const { id } = useParams();
-
     useEffect(() => {
-        const delay = setTimeout(() => {
-
-            const getProduct = fetch(`https://api.mercadolibre.com/items/${id}?include_attributes=all`)
-            getProduct
-                .then((res) => {
-                    const data = res.json();
-                    return data;
-                })
-                .then((data) => {
-                    setProduct(data);
-                })
-                .catch((error) => {
-                    console.log("Hubo un error al querer recuperar el ítem: ", error);
-                })
-                .finally(() => {
-                    setLoading(false);
-                })
-        }, 3000);
-        return () => clearTimeout(delay);
+        const getProduct = fetch(`https://api.mercadolibre.com/items/${id}?include_attributes=all`)
+        getProduct
+            .then((res) => {
+                const data = res.json();
+                return data;
+            })
+            .then((data) => {
+                setProduct(data);
+            })
+            .catch((error) => {
+                console.log("Hubo un error al querer recuperar el ítem: ", error);
+            })
+            .finally(() => {
+                setLoading(false);
+            })
     }, [id])
 
     if (!loading) {
@@ -47,9 +40,7 @@ export default function ItemDetailContainer() {
     }
     if (loading) {
         return (
-            <Spinner animation="border" role="status">
-                <span className="sr-only">Conexión un poco lenta...</span>
-            </Spinner>
+            <Spinner animation="border" role="status"></Spinner>
         );
     }
 }

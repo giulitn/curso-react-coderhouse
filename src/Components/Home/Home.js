@@ -7,7 +7,7 @@ export default function Home() {
 
     return (
         <div className="container">
-            <div className="col-md-12">
+            <div className="title">
                 <h1>Productos</h1>
             </div>
             <ItemListContainer product={Item} />

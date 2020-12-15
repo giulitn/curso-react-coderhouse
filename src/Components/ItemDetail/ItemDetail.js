@@ -14,7 +14,7 @@ function ItemDetail(props) {
                 </div>
                 <div className="col-sm">
                     <ItemCountContainer min='0' max='10' handleClick={props.addtocart} />
-                    <AddToCart qtyCounter={props.itemqty} productTitle={props.product.title} />
+                    <AddToCart qtyCounter={props.itemqty} product={props.product} />
                 </div>
                 <div>
                     <h5>
@@ -27,7 +27,6 @@ function ItemDetail(props) {
                 </div>
             </div>
         </div>
-
     );
 }
 export default ItemDetail;

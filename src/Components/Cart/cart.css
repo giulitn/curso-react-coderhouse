@@ -1,0 +1,9 @@
+
+.buy-link {
+    text-decoration: none!important;
+    color: white;
+}
+.qty:hover {
+    font-weight: 600;
+    text-transform: uppercase;
+}

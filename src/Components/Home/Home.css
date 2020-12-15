@@ -1,7 +1,11 @@
-h1{
+.container h1{
     text-transform: uppercase;
-    font-size: 10px;
-    font-weight: 600;
-    margin: 0.67em 0;
-    justify-content: center;
+    color: #029CDC;
+}
+.title {
+display: flex;
+justify-content: center;
+}
+a {
+    text-decoration: none;
 }

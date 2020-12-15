@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
 import './Item.css'
 
+// flexbox y grid 
+
 function Item(props) {
     return (
-        <div>
-            <div>
-                <div>
+                <div className="col-md-4">
                     <Card style={{ width: '18rem' }} className='Card'>
                         <Card.Img variant="top" src="https://http2.mlstatic.com/D_NQ_NP_2X_983745-MLA41071258804_032020-F.webp" />
                         <Card.Body>
@@ -21,8 +21,6 @@ function Item(props) {
                         </Card.Body>
                     </Card>
                 </div>
-            </div>
-        </div>
     )
 }
 
