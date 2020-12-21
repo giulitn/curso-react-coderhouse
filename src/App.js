@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { getFirestore } from './firebase/index';
 
 
 // Components
@@ -13,12 +12,6 @@ import CartContainer from './Containers/CartContainer';
 
 
 function App() {
-
-//   const [loading, setLoading] = useState(false);
-//   const [items, setItems] = useState([
-
-//   ])
-
   return (
     <BrowserRouter>
       <div>
