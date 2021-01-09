@@ -2,31 +2,31 @@ import React from 'react';
 import ItemCountContainer from '../../Containers/ItemCountContainer'
 import AddToCart from '../AddToCart/AddToCart';
 
-function ItemDetail(props) {
+
+
+const ItemDetail = ({ product, itemqty, addtocart }) => {
+
+
     return (
         <div className="container">
             <div className="row">
                 <div className="col-sm">
-                    <h3>{props.product.title}</h3>
+                    <h3>{product.title}</h3>
                 </div>
                 <div className="col-sm">
-                    <img src={props.product.pictures[0].url} alt="Foto del producto"></img>
+                    <img src={product.image} alt="Foto del producto"></img>
                 </div>
                 <div className="col-sm">
-                    <ItemCountContainer min='0' max='10' handleClick={props.addtocart} />
-                    <AddToCart qtyCounter={props.itemqty} product={props.product} />
+                    <ItemCountContainer min={1} max={30} handleClick={addtocart} />
                 </div>
                 <div>
-                    <h5>
-                        ESPECIFICACIONES:
-                        - Confeccionadas en set de Polyester de primera calidad.
-                        - corte regular fit: corte normal (no son ajustadas)
-                        - Sirven para toda disciplina deportiva. entranamiento funcional, running, crossfit, ciclismo, futbol, basquet, voley y mucho mas.
-                        - Utiles tanto para actividades indoor como outdoor.
-                </h5>
+                    <p>Precio: $ {Intl.NumberFormat().format(product.price)}</p>
+                    <p>Stock disponible: {product.stock}</p>
                 </div>
+                <AddToCart qtyCounter={itemqty} product={product} />
             </div>
         </div>
     );
 }
+
 export default ItemDetail;
