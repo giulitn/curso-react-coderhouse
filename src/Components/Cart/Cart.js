@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { CartContext } from '../../Context/cartContext'
 import { Button, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import CartForm from './CartForm';
 import './cart.css'
 
 function Cart() {
-    const [cartProducts] = useContext(CartContext);
+    // eslint-disable-next-line no-unused-vars
+    const [cartProducts, setCartProducts, totalCost] = useContext(CartContext);
 
     return (
         <div>
@@ -22,6 +24,7 @@ function Cart() {
                                         <span className="qty">{"cantidad:"}</span> {product.count}</p>
                                 ))}
                             </ul>
+                            <h5>Total de la compra: ${totalCost()}</h5>
                         </div>
                         :
                         <h2>Tu carrito está vacío</h2>
@@ -32,6 +35,7 @@ function Cart() {
                     </Link>
                 </Button>
             </Container>
+            <CartForm/>
         </div>
     );
 }

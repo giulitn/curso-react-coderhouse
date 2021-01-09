@@ -6,7 +6,6 @@ import { CgShoppingCart } from 'react-icons/cg'
 export const CartIcon = () => {
     const [cartProducts] = useContext(CartContext);
     const cartSize = () => {
-        console.log('estoy en cart size');
         return cartProducts.reduce((sum, product) => sum + product.count, 0);
     }
 
