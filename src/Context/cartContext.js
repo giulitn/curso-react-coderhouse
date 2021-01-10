@@ -6,7 +6,6 @@ export const CartProvider = ({ children }) => {
     const [cartProducts, setCartProducts] = useState([]);
 
     const totalCost = () => {
-        console.log("calculating total cost")
         const cost = cartProducts.reduce(
           (sum, product) => sum + product.price * product.count,
           0

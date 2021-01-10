@@ -12,7 +12,6 @@ const ItemListContainer = () => {
         let docRef;
 
         if(categoryId){
-            console.log(categoryId, "category idddddd");
             docRef = db.collection("products").where("categoryId", "==", categoryId);
         }else{
             docRef=db.collection("products");

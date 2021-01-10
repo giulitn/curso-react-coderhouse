@@ -15,7 +15,6 @@ export default function itemCount({ counter, onAdd }) {
             </span>
             <VscAdd id="controller" onClick={() => onAdd('add')}></VscAdd>
         </Container>
-
     )
 }
 
