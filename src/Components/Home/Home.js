@@ -10,7 +10,7 @@ export default function Home() {
         <div className="container">
             <Slider/>
             <div className="title">
-                <h1>Productos</h1>
+                <h1>productos</h1>
             </div>
             <ItemListContainer product={Item} />
         </div>

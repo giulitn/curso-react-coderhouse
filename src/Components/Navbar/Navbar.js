@@ -23,9 +23,7 @@ export const NavBar = () => {
                 <Navbar.Collapse>
                     <CategoriesMenu />
                 </Navbar.Collapse>
-                <Navbar.Collapse className="justify-content-end">
-                    <CartIcon />
-                </Navbar.Collapse>
+                    <CartIcon/>
             </Navbar>
         </Container>
     );

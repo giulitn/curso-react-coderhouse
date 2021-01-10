@@ -7,4 +7,5 @@ a.carousel-control-next {
 .mark, mark {
     background-color: #fcf8e373;
     color: black;
+    opacity: 0.7;
 }

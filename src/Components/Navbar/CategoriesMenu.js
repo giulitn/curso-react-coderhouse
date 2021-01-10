@@ -1,12 +1,13 @@
 import React from 'react';
 import { DropdownButton, Dropdown } from "react-bootstrap";
 import { Link } from 'react-router-dom'
+import './Navbar.css'
 
 
 function CategoriesMenu() {
 
     return (
-        <DropdownButton id="dropdown-basic-button" title="Categorías">
+        <DropdownButton id="dropdown-basic-button" title="Ver por categorías">
             <Dropdown.Item>
                 <Link to={`/categories/accesorios`}>Accesorios</Link>
             </Dropdown.Item>
