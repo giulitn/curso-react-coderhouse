@@ -7,5 +7,4 @@ const HomeContainer = () => {
         <Home/>
    ) 
   } 
-  
   export default HomeContainer;

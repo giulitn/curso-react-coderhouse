@@ -7,7 +7,7 @@ import { getFirestore } from './../firebase/index'
 
 export default function ItemDetailContainer() {
 
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [product, setProduct] = useState([]);
     const { productId } = useParams();
     const [itemQty, setItemQty] = useState(0);
@@ -18,18 +18,19 @@ export default function ItemDetailContainer() {
 
     useEffect(() => {
         const db = getFirestore();
-        console.log('holaaaaaaa', productId);
         const docRef = db.collection("products").doc(productId);
-
         docRef.get().then((querySnapshot) => {
             setLoading(false);
-            setProduct({ id: querySnapshot.id, ...querySnapshot.data() });
+            if (querySnapshot.data()) {
+                setProduct({ id: querySnapshot.id, ...querySnapshot.data() });
+            }
         });
     }, [productId])
 
     return (
         <>
             {loading ? <Spinner animation="border" role="status" />
+                : (product.length === 0) ? <h4>Producto no encontrado</h4> 
                 : <ItemDetail product={product} addtocart={handleAddToCartClick} itemqty={itemQty} />
             }
         </>

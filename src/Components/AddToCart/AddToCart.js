@@ -9,9 +9,9 @@ function AddToCart({ qtyCounter, product }) {
             id: product.id,
             title: product.title,
             price: product.price,
+            description: product.description,
             count: qtyCounter
         }
-        console.log(cartProducts, 'holaaaaa!!!!!!!!!')
         if (cartProducts.find((product) => product.id === cartItem.id)) {
             const newCartProducts = cartProducts.map((product) => {
                 if (product.id === cartItem.id) {

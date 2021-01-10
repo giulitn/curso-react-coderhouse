@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
-function CartForm() {
+function CartForm({createOrder}) {
 
     const [form, setForm] = useState({
         firstName: '',
@@ -17,12 +17,18 @@ function CartForm() {
             return { ...state, [name]: value }
         })
     }
+
+    const handleOnclick = () => {
+        const { firstName, lastName, email, phone } = form
+        createOrder({ firstName, lastName, email, phone })
+    }
+
     const disabled = !(
         form.email.length &&
         form.firstName.length &&
         form.lastName.length &&
         form.emailConfirmation.length &&
-        form.phone.length  &&
+        form.phone.length &&
         form.email === form.emailConfirmation
     )
 
@@ -38,7 +44,7 @@ function CartForm() {
                 <Form.Control type="text" placeholder="E-mail" name="email" onChange={handleChange} />
                 <br />
                 <Form.Control type="text" placeholder="Confirmación de e-mail" name="emailConfirmation" onChange={handleChange} />
-                <Button variant="primary" type="submit" disabled={disabled}>
+                <Button variant="primary" type="submit" disabled={disabled} onClick={handleOnclick}>
                     Confirmar orden
                 </Button>
             </Form.Group>

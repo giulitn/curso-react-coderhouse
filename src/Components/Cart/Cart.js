@@ -1,13 +1,28 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../../Context/cartContext'
-import { Button, Container } from 'react-bootstrap'
+import { Button, Container, Alert } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import CartForm from './CartForm';
 import './cart.css'
 
-function Cart() {
+function Cart({ createOrder, orderId }) {
     // eslint-disable-next-line no-unused-vars
     const [cartProducts, setCartProducts, totalCost] = useContext(CartContext);
+
+    if (orderId) {
+        return (
+            <Alert variant="success">
+                <Alert.Heading>¡Gracias por tu compra! </Alert.Heading>
+                <p>
+                    El código de tu compra es: {orderId}
+                </p>
+                <hr />
+                <p className="mb-0">
+                    Ya te estamos enviando un e-mail con la información de tu orden
+                </p>
+            </Alert>
+        )
+    }
 
     return (
         <div>
@@ -35,7 +50,7 @@ function Cart() {
                     </Link>
                 </Button>
             </Container>
-            <CartForm/>
+            <CartForm createOrder={createOrder} />
         </div>
     );
 }

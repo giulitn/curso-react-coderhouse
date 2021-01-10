@@ -10,7 +10,7 @@ export const CartIcon = () => {
     }
 
     return (
-        <div classname="container">
+        <div className="container">
             <Link to={'/cart'}>
                 <CgShoppingCart />
                 <span className="badge white"> {cartSize()} </span>

@@ -24,7 +24,6 @@ const ItemDetail = ({ product, itemqty, addtocart }) => {
                 </div>
                 <div>
                     <p>Precio: $ {Intl.NumberFormat().format(product.price)}</p>
-                    <p>Stock disponible: {product.stock}</p>
                 </div>
                 <AddToCart qtyCounter={itemqty} product={product} />
             </div>
