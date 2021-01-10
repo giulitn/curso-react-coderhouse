@@ -1,0 +1,10 @@
+a.carousel-control-prev {
+    display: none;
+}
+a.carousel-control-next {
+    display: none;
+}
+.mark, mark {
+    background-color: #fcf8e373;
+    color: black;
+}
