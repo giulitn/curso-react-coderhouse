@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/curso-react-coderhouse/static/css/main.53d09e63.chunk.css",
+    "main.js": "/curso-react-coderhouse/static/js/main.1af207d2.chunk.js",
+    "main.js.map": "/curso-react-coderhouse/static/js/main.1af207d2.chunk.js.map",
+    "runtime-main.js": "/curso-react-coderhouse/static/js/runtime-main.556483c5.js",
+    "runtime-main.js.map": "/curso-react-coderhouse/static/js/runtime-main.556483c5.js.map",
+    "static/css/2.150d169a.chunk.css": "/curso-react-coderhouse/static/css/2.150d169a.chunk.css",
+    "static/js/2.537a66f7.chunk.js": "/curso-react-coderhouse/static/js/2.537a66f7.chunk.js",
+    "static/js/2.537a66f7.chunk.js.map": "/curso-react-coderhouse/static/js/2.537a66f7.chunk.js.map",
+    "static/js/3.dffcdc8b.chunk.js": "/curso-react-coderhouse/static/js/3.dffcdc8b.chunk.js",
+    "static/js/3.dffcdc8b.chunk.js.map": "/curso-react-coderhouse/static/js/3.dffcdc8b.chunk.js.map",
+    "index.html": "/curso-react-coderhouse/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/curso-react-coderhouse/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.53d09e63.chunk.css.map": "/curso-react-coderhouse/static/css/main.53d09e63.chunk.css.map",
+    "static/js/2.537a66f7.chunk.js.LICENSE.txt": "/curso-react-coderhouse/static/js/2.537a66f7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.556483c5.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.537a66f7.chunk.js",
+    "static/css/main.53d09e63.chunk.css",
+    "static/js/main.1af207d2.chunk.js"
+  ]
+}
