@@ -35,8 +35,8 @@ function Cart({ createOrder, orderId }) {
                             </h2>
                             <ul>
                                 {cartProducts.map((product) => (
-                                    <p>{product.title} <br />
-                                        <span className="qty">{"cantidad:"}</span> {product.count}</p>
+                                    <li>{product.title} <br />
+                                        <span className="qty">{"cantidad:"}</span> {product.count}</li>
                                 ))}
                             </ul>
                             <h5>Total de la compra: ${totalCost()}</h5>
@@ -50,6 +50,7 @@ function Cart({ createOrder, orderId }) {
                     </Link>
                 </Button>
             </Container>
+            <br></br>
             <CartForm createOrder={createOrder} />
         </div>
     );

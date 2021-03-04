@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Container } from 'react-bootstrap';
 
 function CartForm({createOrder}) {
 
@@ -33,7 +33,7 @@ function CartForm({createOrder}) {
     )
 
     return (
-        <div>
+        <Container>
             <Form.Group>
                 <Form.Control type="text" placeholder="Nombre" name="firstName" onChange={handleChange} />
                 <br />
@@ -44,12 +44,13 @@ function CartForm({createOrder}) {
                 <Form.Control type="text" placeholder="E-mail" name="email" onChange={handleChange} />
                 <br />
                 <Form.Control type="text" placeholder="Confirmación de e-mail" name="emailConfirmation" onChange={handleChange} />
+                <br></br>
                 <Button variant="primary" type="submit" disabled={disabled} onClick={handleOnclick}>
                     Confirmar orden
                 </Button>
             </Form.Group>
 
-        </div>
+        </Container>
     );
 }
 
