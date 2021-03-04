@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Cart from '../Components/Cart/Cart'
-import * as firebase from 'firebase/app'
+import firebase from 'firebase/app'
 import 'firebase/firestore'
 import { getFirestore } from '../firebase'
 import { CartContext } from "../Context/cartContext";
