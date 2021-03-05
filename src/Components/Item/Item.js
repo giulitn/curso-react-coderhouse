@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
-import './Item.css'
+//import './Item.css'
 
 
 const Item = ({ item:

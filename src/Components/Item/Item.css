@@ -10,12 +10,13 @@
     padding: 10px;
     text-align: center;
     width: 224px;
-  }
+}
   
-  .Card-Image {
-    height: 180px;
-  }
-  .Card-Title {
-    font-size: .8em;
-    margin: 0;
-  }
+.Card-Image {
+  height: 180px;
+}
+
+.Card-Title {
+  font-size: .8em;
+  margin: 0;
+}
